@@ -36,4 +36,18 @@ fn main() {
     }
 
     println!("total = {}", total);
+
+    let mut freq_count = 0;
+
+    // Frequency calculation
+    for i in 0..length {
+        let value = arr1[i];
+        let occurences: i32 = arr2.iter().filter(|&n| *n == value).count() as i32;
+        println!("{} -> {} = {}", arr1[i], arr2[i], value * occurences);
+        
+
+        freq_count += value * occurences;
+    }
+
+    println!("frequency = {}", freq_count);
 }
